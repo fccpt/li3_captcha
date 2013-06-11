@@ -15,10 +15,10 @@ Include the library in in your `/app/config/bootstrap/libraries.php`
 
 Create a controller and add the foollowing code:
         
-        //at the top of controller file add        
+        //at the top of the controller file add:        
         use li3_captcha\controllers\CaptchaController;
         
-        //inside your public function 
+        //inside your public function add:
         $captcha = new CaptchaController(array('request' => $this->request));
 
         if ($this->request->data && $captcha->_checkCaptcha()){
