@@ -13,8 +13,12 @@ Include the library in in your `/app/config/bootstrap/libraries.php`
 
 ## Configuration
 
-Create a controller and add the foollowing code :
-
+Create a controller and add the foollowing code:
+        
+        //at the top of controller file add        
+        use li3_captcha\controllers\CaptchaController;
+        
+        //inside your public function 
         $captcha = new CaptchaController(array('request' => $this->request));
 
         if ($this->request->data && $captcha->_checkCaptcha()){
